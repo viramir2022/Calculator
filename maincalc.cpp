@@ -126,6 +126,7 @@ A("9");
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button10Click(TObject *Sender)
 {
+if (Edit1->Text=="0") return;
 A("0");
 }
 //---------------------------------------------------------------------------
@@ -218,7 +219,9 @@ else if (Key=='6') A("6");
 else if (Key=='7') A("7");
 else if ((Key=='8')&&(!Shift.Contains(ssShift))) A("8");
 else if (Key=='9') A("9");
-else if (Key=='0') A("0");
+else if (Key=='0')  {
+if (Edit1->Text!="0") A("0");
+}
 else if (Key==8)
 {
 Edit1->Text = Edit1->Text.Delete(Edit1->Text.Length(), 1);
